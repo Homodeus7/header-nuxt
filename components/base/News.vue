@@ -14,12 +14,20 @@
         <div class="h-8 w-2 bg-[#9D283B]"></div>
         <img
           class="h-[30px] -z-10"
-          :class="{ swing }"
+          :class="{ swing: swing }"
           src="@/assets/images/bell.png"
         />
         <div class="h-8 w-2 bg-[#9D283B]"></div>
       </div>
-      <BaseButtonClose v-if="menu === true" @click.stop="menu = false" />
+      <BaseButtonClose
+        v-if="menu === true"
+        @click.stop="
+          () => {
+            menu = false;
+            ringSwing();
+          }
+        "
+      />
     </div>
     <div
       v-if="menu === false"
