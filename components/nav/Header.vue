@@ -7,12 +7,18 @@
         </NuxtLink>
         <BaseNews />
         <div class="flex items-center gap-2 appearnce px-2">
-          <img src="@/assets/images/icons/search.svg" />
-          <span class="text-[#3F3F3F] appearnce__child">Поиск</span>
+          <img
+            class="lg:hidden"
+            src="@/assets/images/icons/search-mobile.svg"
+          />
+          <img class="hidden lg:block" src="@/assets/images/icons/search.svg" />
+          <span class="hidden lg:block text-[#3F3F3F] appearnce__child"
+            >Поиск</span
+          >
         </div>
       </div>
-      <nav class="flex items-center gap-8">
-        <div class="flex items-center gap-4">
+      <nav class="flex items-center gap-11">
+        <div class="hidden lg:flex items-center gap-10">
           <div
             v-for="category in app.categories"
             :key="category"
@@ -27,11 +33,11 @@
           </div>
         </div>
         <BaseBurger
-          @click="menu = !menu"
-          :class="{ burger_menu: menu === true }"
+          @click="dropdownMenu = !dropdownMenu"
+          :class="{ burger_menu: dropdownMenu === true }"
         />
       </nav>
-      <BaseDropdownMenu :open="menu" />
+      <BaseDropdownMenu :open="dropdownMenu" />
     </div>
   </div>
 </template>
@@ -39,14 +45,13 @@
 import { useApp } from "@/store/app";
 
 const app = useApp();
-const menu = ref(false);
+const dropdownMenu = ref(false);
 </script>
 
 <style lang="scss" scoped>
 .container {
   width: 1680px;
 }
-
 .appearnce:hover .appearnce__child {
   animation: appearance 0.2s;
 }

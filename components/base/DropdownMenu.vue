@@ -1,7 +1,7 @@
 <template>
   <div
-    class="h-[400px] menu w-full fixed top-[6em] left-0 bg-[#fff] rounded-b-[64px] duration-300 flex items-center justify-center drop-shadow-xl z-10"
-    :class="[{ menu_isopen: props.open }]"
+    class="h-[400px] dropdown_menu w-full fixed top-[6em] left-0 bg-[#fff] rounded-b-[64px] duration-300 flex items-center justify-center drop-shadow-xl z-20"
+    :class="[{ dropdown_menu_isopen: props.open }]"
   >
     <nav class="flex items-center gap-8">
       <div class="flex items-center gap-4">
@@ -33,7 +33,7 @@ const props = defineProps<menu>();
 </script>
 
 <style lang="scss" scoped>
-.menu {
+.dropdown_menu {
   transform: translateY(-700px);
   &_isopen {
     transform: translateY(0);

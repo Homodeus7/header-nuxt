@@ -1,8 +1,7 @@
 <template>
-  <div class="w-full flex flex-col">
+  <div class="page">
     <NavHeader />
-    <slot> </slot>
-    <NavFooter />
+    <slot />
   </div>
 </template>
 
@@ -10,7 +9,7 @@
 
 <style scoped>
 .page {
-  display: grid;
-  grid-template-rows: 1fr max-content fr 1fr;
+  display: flex;
+  flex-direction: column;
 }
 </style>
