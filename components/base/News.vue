@@ -12,11 +12,7 @@
     >
       <div v-if="menu === false" class="flex">
         <div class="h-8 w-2 bg-[#9D283B]"></div>
-        <img
-          class="h-[30px] -z-10"
-          :class="{ swing }"
-          src="@/assets/images/bell.png"
-        />
+        <img class="h-[30px] -z-10 swing" src="@/assets/images/bell.png" />
         <div class="h-8 w-2 bg-[#9D283B]"></div>
       </div>
       <BaseButtonClose v-if="menu === true" @click.stop="menu = false" />
@@ -38,13 +34,10 @@ const ringSwing = () => {
   swing.value = true;
   setTimeout(() => (swing.value = false), 5000);
 };
-onMounted(() => {
-  ringSwing();
-});
 </script>
 <style lang="scss">
 .swing {
-  animation: swing 2.2s ease-in-out;
+  animation: swing 2.2s ease-in-out infinite;
   transform-origin: 50% 4px;
 }
 @keyframes swing {
