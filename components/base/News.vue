@@ -11,9 +11,9 @@
       }"
     >
       <div v-if="menu === false" class="flex">
-        <div class="h-8 w-2 bg-[#9D283B]"></div>
-        <img class="h-[30px] -z-10 swing" src="@/assets/images/bell.png" />
-        <div class="h-8 w-2 bg-[#9D283B]"></div>
+        <div class="h-8 w-2 bg-[#9D283B] z-10"></div>
+        <img class="h-[30px] swing" src="@/assets/images/bell.png" />
+        <div class="h-8 w-2 bg-[#9D283B] z-10"></div>
       </div>
       <BaseButtonClose v-if="menu === true" @click.stop="menu = false" />
     </div>
@@ -26,18 +26,12 @@
 
 <script lang="ts" setup>
 const menu = ref(false);
-const swing = ref(false);
 const dropdown = ref<HTMLElement | null>(null);
 onClickOutside(dropdown, () => (menu.value = false));
-
-const ringSwing = () => {
-  swing.value = true;
-  setTimeout(() => (swing.value = false), 5000);
-};
 </script>
 <style lang="scss">
 .swing {
-  animation: swing 2.2s ease-in-out infinite;
+  animation: swing 2.2s 2s ease-in-out infinite;
   transform-origin: 50% 4px;
 }
 @keyframes swing {

@@ -3,9 +3,9 @@
     class="h-full lg:h-[400px] dropdown_menu w-full fixed top-[64px] lg:top-[96px] left-0 bg-[#f5f5f5] lg:bg-[#fff] rounded-b-[64px] duration-300 flex items-center justify-center drop-shadow-xl z-20"
     :class="[{ dropdown_menu_isopen: props.open }]"
   >
-    <nav class="flex items-center gap-8">
+    <nav class="flex">
       <div
-        class="flex flex-col lg:flex-row items-start lg:items-center justify-center gap-4"
+        class="flex flex-col items-start justify-center lg:items-center lg:flex-row gap-4"
       >
         <div
           v-for="category in app.categories"
