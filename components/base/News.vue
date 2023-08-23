@@ -4,9 +4,9 @@
       ref="dropdown"
       @click="menu = true"
       :class="{
-        'absolute top-0 w-10 h-10 flex items-center justify-center overflow-hidden bg-[#9D283B] rounded-r-full rounded-b-full ease-in duration-300 z-10':
+        'w-10 h-10 absolute top-0 flex items-center justify-center overflow-hidden bg-[#9D283B] rounded-r-full rounded-b-full ease-in lg:duration-300 z-10 cursor-pointer':
           menu === false,
-        'absolute top-0 w-[300px] h-[400px] flex items-start justify-end py-6 px-7 bg-white rounded-3xl ease-in duration-300 z-30 drop-shadow-xl':
+        'w-[300px] h-[400px] absolute top-0 -left-52 lg:left-0 flex items-start justify-end py-6 px-7 bg-white rounded-3xl ease-in lg:duration-300 z-30 drop-shadow-xl':
           menu === true,
       }"
     >

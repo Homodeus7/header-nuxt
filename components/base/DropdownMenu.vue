@@ -1,10 +1,12 @@
 <template>
   <div
-    class="h-[400px] dropdown_menu w-full fixed top-[6em] left-0 bg-[#fff] rounded-b-[64px] duration-300 flex items-center justify-center drop-shadow-xl z-20"
+    class="h-full lg:h-[400px] dropdown_menu w-full fixed top-[64px] lg:top-[96px] left-0 bg-[#f5f5f5] lg:bg-[#fff] rounded-b-[64px] duration-300 flex items-center justify-center drop-shadow-xl z-20"
     :class="[{ dropdown_menu_isopen: props.open }]"
   >
     <nav class="flex items-center gap-8">
-      <div class="flex items-center gap-4">
+      <div
+        class="flex flex-col lg:flex-row items-start lg:items-center justify-center gap-4"
+      >
         <div
           v-for="category in app.categories"
           :key="category"
@@ -34,7 +36,7 @@ const props = defineProps<menu>();
 
 <style lang="scss" scoped>
 .dropdown_menu {
-  transform: translateY(-700px);
+  transform: translateY(-130%);
   &_isopen {
     transform: translateY(0);
   }

@@ -1,32 +1,41 @@
 <template>
-  <div class="min-h-[96px] flex items-center justify-center bg-[#f5f5f5]">
+  <div
+    class="min-h-[64px] lg:min-h-[96px] flex items-center justify-center bg-[#f5f5f5]"
+  >
     <div class="container w-full h-full flex items-center justify-between">
-      <div class="flex gap-12">
+      <div
+        class="w-full flex items-center justify-between lg:justify-start lg:gap-12"
+      >
         <NuxtLink to="/">
           <BaseIconsLogo />
         </NuxtLink>
-        <BaseNews />
-        <div class="flex items-center gap-2 appearnce px-2">
+        <BaseNews class="order-1 lg:order-none" />
+        <div class="flex items-center gap-2 appearnce lg:px-2">
           <img
             class="lg:hidden"
             src="@/assets/images/icons/search-mobile.svg"
           />
           <img class="hidden lg:block" src="@/assets/images/icons/search.svg" />
-          <span class="hidden lg:block text-[#3F3F3F] appearnce__child"
-            >Поиск</span
-          >
+          <span class="hidden lg:block text-[#3F3F3F] appearnce__child">
+            Поиск
+          </span>
         </div>
+        <BaseBurger
+          class="lg:hidden order-2"
+          @click="dropdownMenu = !dropdownMenu"
+          :class="{ burger_menu: dropdownMenu === true }"
+        />
       </div>
-      <nav class="flex items-center gap-11">
-        <div class="hidden lg:flex items-center gap-10">
+      <nav class="hidden lg:flex items-center gap-11">
+        <div class="flex items-center gap-12">
           <div
             v-for="category in app.categories"
             :key="category"
             class="flex items-center appearnce"
           >
             <NuxtLink to="/">
-              <div class="flex items-center gap-2 appearnce__child">
-                <div class="w-5 h-[2px] bg-[#1c1c1c]"></div>
+              <div class="min-w-max flex items-center gap-2 appearnce__child">
+                <span class="w-5 h-[2px] bg-[#1c1c1c]"></span>
                 <span> {{ category }}</span>
               </div>
             </NuxtLink>
@@ -50,7 +59,10 @@ const dropdownMenu = ref(false);
 
 <style lang="scss" scoped>
 .container {
-  width: 1680px;
+  padding: 0 16px;
+  @media (min-width: 1024px) {
+    width: 1680px;
+  }
 }
 .appearnce:hover .appearnce__child {
   animation: appearance 0.2s;
