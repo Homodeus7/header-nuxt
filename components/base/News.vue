@@ -6,7 +6,7 @@
       :class="{
         'w-8 h-8 lg:w-10 lg:h-10 absolute top-0 flex items-center justify-center overflow-hidden bg-[#9D283B] rounded-r-full rounded-b-full ease-in lg:duration-300 z-10 cursor-pointer':
           menu === false,
-        'w-[392px] h-[548px] absolute top-0 -left-52 lg:left-0 flex items-start justify-end py-6 px-7 bg-white rounded-3xl ease-in lg:duration-300 z-30 drop-shadow-xl':
+        'w-[320px] lg:w-[392px] h-[548px] absolute top-0 -left-52 lg:left-0 flex items-start justify-end py-6 px-7 bg-white rounded-3xl ease-in lg:duration-300 z-30 drop-shadow-xl':
           menu === true,
       }"
     >
