@@ -29,15 +29,14 @@
 
 <script setup>
 const menu = ref(false);
-// const dropdown = ref(HTMLElement);
-// onClickOutside(dropdown, () => (menu.value = false));
+const dropdown = ref();
+onClickOutside(dropdown, () => (menu.value = false));
 </script>
 <style lang="scss">
 .swing {
   animation: swing 2.2s 2s ease-in-out infinite;
   transform-origin: 50% 4px;
 }
-
 @keyframes swing {
   0% {
     transform: rotate(0);
