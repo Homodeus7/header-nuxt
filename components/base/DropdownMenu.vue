@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-full lg:h-[400px] dropdown_menu w-full fixed top-[64px] lg:top-[96px] left-0 bg-[#f5f5f5] lg:bg-[#fff] rounded-b-[64px] duration-300 flex items-center justify-center drop-shadow-xl z-20"
+    class="dropdown_menu w-full h-[90vh] absolute top-[63px] lg:top-[96px] bg-[#fff] lg:rounded-b-[64px] duration-300 flex items-center justify-center drop-shadow-xl z-20"
     :class="[{ dropdown_menu_isopen: props.open }]"
   >
     <nav class="flex">

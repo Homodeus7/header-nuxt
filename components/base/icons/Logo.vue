@@ -1,10 +1,9 @@
 <template>
   <svg
-    width="137"
-    height="40"
     viewBox="0 0 137 40"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    class="w-[106px] h-[31px] lg:w-[137] lg:h-[40px]"
   >
     <path
       fill-rule="evenodd"
