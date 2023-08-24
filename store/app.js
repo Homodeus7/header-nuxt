@@ -1,12 +1,6 @@
 import { defineStore } from "pinia";
 
-interface AppStore {
-  title: string;
-  text: string;
-  categories: string[];
-}
-
-export const useApp = defineStore<"app", AppStore>("app", {
+export const useApp = defineStore("app", {
   state: () => {
     return {
       title: "App Title",

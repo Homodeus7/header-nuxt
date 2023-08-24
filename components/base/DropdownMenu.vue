@@ -24,14 +24,12 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import { useApp } from "@/store/app";
 const app = useApp();
-
-interface menu {
-  open?: boolean;
-}
-const props = defineProps<menu>();
+const props = defineProps({
+  open: { type: Boolean },
+});
 </script>
 
 <style lang="scss" scoped>

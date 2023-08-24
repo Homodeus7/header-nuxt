@@ -27,10 +27,10 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 const menu = ref(false);
-const dropdown = ref<HTMLElement | null>(null);
-onClickOutside(dropdown, () => (menu.value = false));
+// const dropdown = ref(HTMLElement);
+// onClickOutside(dropdown, () => (menu.value = false));
 </script>
 <style lang="scss">
 .swing {

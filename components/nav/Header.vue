@@ -56,7 +56,7 @@
     <BaseDropdownMenu :open="dropdownMenu" />
   </div>
 </template>
-<script lang="ts" setup>
+<script setup>
 import { useApp } from "@/store/app";
 const app = useApp();
 const dropdownMenu = ref(false);
@@ -103,7 +103,6 @@ const dropdownMenu = ref(false);
 .swappin:hover .swappin__child {
   transform: translate3d(0, -200%, 0);
 }
-
 // .appearance:hover .appearance__child {
 //   animation: appearance 0.2s;
 // }

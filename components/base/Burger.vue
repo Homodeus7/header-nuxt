@@ -42,7 +42,6 @@
     transform: scale(0.9);
   }
 }
-
 @keyframes appearance {
   0% {
     transform: translateY(-6px);
